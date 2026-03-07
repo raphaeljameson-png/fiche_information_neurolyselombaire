@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Fiche d'information patient — Thermocoagulation Lombaire (Rhizolyse)</title>
+<style>
+  :root {
+    --ink:#111;
+    --muted:#444;
+    --accent:#0b6fa4;      /* bleu */
+    --accent2:#22b8b8;     /* turquoise */
+    --bg:#fff;
+    --border:#d9d9d9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f3f5f7;
+    color: var(--ink);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,Helvetica,sans-serif;
+    line-height: 1.35;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: rgba(255,255,255,.92);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(6px);
+  }
+  .toolbar-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .toolbar .btn {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .toolbar .btn.primary {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #fff;
+  }
+  .wrap {
+    max-width: 980px;
+    margin: 22px auto;
+    padding: 0 16px 28px;
+  }
+  .page {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 26px 34px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  }
+  header.top {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--accent);
+  }
+  header.top img {
+    width: 110px;
+    height: auto;
+  }
+  .brand h1 {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: .2px;
+    text-transform: uppercase;
+  }
+  .brand .line {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 2px;
+  }
+  .doc-title {
+    margin-top: 18px;
+    border-left: 6px solid var(--accent2);
+    padding-left: 14px;
+  }
+  .doc-title h2 {
+    margin: 0;
+    font-size: 22px;
+  }
+  .doc-title .meta {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 13px;
+    display: flex;
+    gap: 30px;
+  }
+
+  h3 {
+    margin: 22px 0 8px;
+    font-size: 16px;
+    color: var(--accent);
+  }
+  h4 {
+    margin: 14px 0 6px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  p { margin: 8px 0; }
+  ul, ol { margin: 8px 0 8px 18px; }
+  li { margin: 4px 0; }
+
+  .note {
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--accent2);
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #fbfeff;
+    margin: 12px 0;
+  }
+  .note.info {
+    border-left-color: var(--accent);
+    background: #f0f7fb;
+  }
+  .warn {
+    border-left-color: #d93025;
+    background: #fff9f8;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 14px;
+    font-size: 13px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    vertical-align: top;
+  }
+  th {
+    background: #f6f8fa;
+    text-align: left;
+  }
+
+  .hr {
+    margin: 18px 0;
+    height: 1px;
+    background: var(--border);
+    border: 0;
+  }
+
+  footer {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  /* Print */
+  @media print {
+    body { background: white; }
+    .toolbar { display: none; }
+    .wrap { margin: 0; padding: 0; }
+    .page {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 14mm 14mm;
+    }
+    a { color: inherit; text-decoration: none; }
+    @page { size: A4; margin: 12mm; }
+  }
+
+/* Print layout improvements */
+@media print {
+  .no-print, .no-print * { display: none !important; }
+}
+@page { margin: 12mm; }
+</style>
+</head>
+<body>
+<div class="toolbar no-print">
+<div class="toolbar-inner">
+<div style="font-weight:700;">Fiche Thermocoagulation Facettaire (Rhizolyse)</div>
+<button class="btn primary" onclick="window.print()">Imprimer / Sauvegarder PDF</button>
+</div>
+</div>
+<div class="wrap">
+<div class="page">
+<header class="top">
+<img alt="Logo Espace Francilien du Rachis" src="logo.png"/>
+<div class="brand">
+<h1>ESPACE FRANCILIEN DU RACHIS</h1>
+<div class="line">95, rue de Prony — 75017 Paris | www.rachis.paris</div>
+<div class="line">Dr Raphaël Jameson · Dr Mayalen Lamerain · Dr Christophe Travert</div>
+</div>
+</header>
+<div class="doc-title">
+<h2>FICHE D'INFORMATION PATIENT — Neurolyse et Thermocoagulation Facettaire Lombaire (Rhizolyse)</h2>
+<div class="meta">
+<div><strong>Document remis le :</strong> ____ / ____ / ________</div>
+<div><strong>Patient(e) :</strong> ___________________________________</div>
+</div>
+</div>
+<div class="note">
+        Cette fiche d'information a été conçue pour vous fournir un support complet à l'information orale délivrée par votre chirurgien au cours des consultations.
+        Elle ne se substitue pas à l'entretien direct avec votre médecin. Conformément à la législation en vigueur, vous devez disposer d'une information claire, loyale et appropriée avant toute intervention. Toutes les complications ne peuvent être précisées, ce que vous avez compris et accepté.
+      </div>
+
+<h3>CHAPITRE 1 — COMPRENDRE LA PATHOLOGIE (LE SYNDROME FACETTAIRE)</h3>
+<h4>1.1 Rappel anatomique : les articulations postérieures</h4>
+<p>La colonne lombaire est constituée de vertèbres séparées par de gros disques à l'avant, et reliées à l'arrière par de petites articulations que l'on appelle les <strong>articulations articulaires postérieures (ou facettes)</strong>. Elles fonctionnent comme de petites charnières permettant à votre dos de se pencher en arrière et de pivoter. Chacune de ces articulations possède une capsule très richement innervée par un petit filet nerveux : le <strong>rameau médian du nerf articulaire postérieur</strong>. Ce petit nerf n'a qu'une seule fonction : transmettre le signal de la douleur articulaire au cerveau.</p>
+
+<h4>1.2 L'arthrose facettaire</h4>
+<p>Avec l'âge, le surpoids ou les efforts répétés, ces petites charnières s'usent, c'est l'<strong>arthrose articulaire postérieure</strong> (ou syndrome facettaire). Cette usure irrite le petit nerf sensitif, ce qui déclenche des douleurs chroniques dans le bas du dos (lombalgies), souvent décrites comme une "barre", et typiquement aggravées lorsque vous vous tenez debout longtemps, que vous piétinez ou que vous vous cambrez en arrière.</p>
+
+<h3>CHAPITRE 2 — LE PRÉREQUIS INDISPENSABLE : LE TEST DIAGNOSTIQUE</h3>
+<p>La thermocoagulation (ou rhizolyse) n'est jamais réalisée d'emblée. Pour s'assurer que vos douleurs proviennent bien de ces articulations et que l'intervention sera efficace, un <strong>test diagnostique préalable est obligatoire</strong>.</p>
+<ul>
+<li>Il consiste en une infiltration précise d'un produit anesthésique local au contact direct du nerf ciblé, sous contrôle radiologique ou échographique.</li>
+<li>Si ce "bloc test" soulage très nettement votre douleur lombaire habituelle (même de façon temporaire, pendant quelques heures), le diagnostic est confirmé. C'est la preuve que la thermocoagulation aura de bonnes chances de succès.</li>
+</ul>
+
+<h3>CHAPITRE 3 — LA TECHNIQUE (LA THERMOCOAGULATION PAR RADIOFRÉQUENCE)</h3>
+<h4>3.1 L'objectif de l'intervention</h4>
+<p>Le but de la rhizolyse n'est pas de guérir l'arthrose (qui est une usure mécanique irréversible), mais de <strong>couper le "câble" qui transmet la douleur au cerveau</strong>. Pour cela, on utilise la chaleur (thermocoagulation par radiofréquence) pour "endormir" ou neutraliser la pointe du petit nerf sensitif (le rameau médian), sans toucher à l'articulation elle-même.</p>
+
+<h4>3.2 Le déroulement en salle d'intervention</h4>
+<ul>
+<li><strong>Installation :</strong> L'intervention se déroule en salle de radiologie ou au bloc opératoire, en chirurgie ambulatoire. Vous êtes installé(e) à plat ventre. L'intervention dure environ 20 à 30 minutes.</li>
+<li><strong>Anesthésie :</strong> Elle est réalisée sous <strong>anesthésie locale</strong> stricte, avec parfois l'administration d'un léger calmant par voie intraveineuse (sédation). Vous restez conscient(e) pour pouvoir guider le médecin lors des tests.</li>
+<li><strong>Guidage :</strong> Le médecin utilise un appareil de radioscopie (rayons X) en direct pour positionner avec une précision millimétrique des aiguilles spécifiques à la surface de l'os, juste sur le trajet du nerf, souvent de chaque côté de la colonne et sur plusieurs étages (L3-L4, L4-L5, L5-S1).</li>
+<li><strong>Tests de sécurité :</strong> Avant de chauffer, le médecin envoie de faibles impulsions électriques. <em>Test sensitif :</em> vous ressentez des picotements dans le dos. <em>Test moteur :</em> le médecin vérifie que le courant ne descend pas dans les jambes (ce qui garantit que le nerf sciatique ou crural est à distance de sécurité).</li>
+<li><strong>La coagulation :</strong> Une fois la sécurité assurée, l'extrémité de l'aiguille chauffe à <strong>80°C pendant 60 à 90 secondes</strong> pour coaguler le petit nerf.</li>
+</ul>
+
+<h3>CHAPITRE 4 — RÉSULTATS ATTENDUS ET LIMITES</h3>
+<h4>4.1 Un effet différé</h4>
+<p>L'effet bénéfique n'est <strong>jamais immédiat</strong>. Le réchauffement des tissus crée une petite inflammation locale. Il est donc normal d'avoir une <strong>recrudescence de la douleur pendant 4 à 10 jours</strong> après l'intervention. Le résultat final se juge à <strong>3 ou 4 semaines</strong>.</p>
+
+<h4>4.2 Une efficacité temporaire mais renouvelable</h4>
+<p>Le corps humain a la capacité de régénérer les nerfs périphériques. Le petit rameau sensitif va donc repousser au fil des mois (environ 1 millimètre par mois). L'effet antalgique dure en moyenne de <strong>6 mois à 1 an et demi</strong> (parfois 2 ans). Lorsque la douleur réapparaît, <strong>l'intervention peut tout à fait être répétée</strong>.</p>
+
+<div class="note info">
+<strong>La vraie stratégie : La fenêtre d'opportunité</strong><br>
+Le but principal de cette intervention n'est pas de vous laisser passif en attendant la repousse du nerf, mais de vous offrir une période de "silence douloureux". Vous devez absolument utiliser ces mois de répit pour réaliser une <strong>rééducation active (kinésithérapie, renforcement du gainage)</strong>. C'est la musculature de votre dos qui protègera vos articulations à long terme.
+</div>
+
+<h3>CHAPITRE 5 — COMPLICATIONS ET RISQUES POTENTIELS</h3>
+<p>Cette technique percutanée (sans ouverture chirurgicale) est extrêmement sûre. Les risques sont très faibles :</p>
+<ul>
+<li><strong>Recrudescence douloureuse temporaire :</strong> Suite la plus fréquente (quasi normale), liée à l'inflammation thermique. Gérée par des antalgiques classiques.</li>
+<li><strong>Troubles sensitifs cutanés (Dysesthésies) :</strong> Sensation de "coup de soleil", d'hypersensibilité cutanée ou d'engourdissement sur la peau du bas du dos. C'est transitoire (quelques semaines).</li>
+<li><strong>Risque d'échec :</strong> Le soulagement peut être incomplet, notamment si la douleur provient en fait de plusieurs structures (disque et facettes).</li>
+<li><strong>Infection locale ou abcès :</strong> Risque exceptionnel prévenu par la désinfection rigoureuse.</li>
+<li><strong>Hématome :</strong> Très rare. Il est important de signaler tout traitement anticoagulant avant l'intervention.</li>
+</ul>
+
+<div class="note warn">
+<strong>Y a-t-il un risque de paralysie des jambes ?</strong><br>
+<strong>Non.</strong> Les aiguilles ciblent exclusivement les petits nerfs <em>sensitifs</em> à l'arrière de la vertèbre. Les gros nerfs <em>moteurs</em> qui font bouger vos jambes (nerf sciatique/crural) sont situés très en avant et sont protégés. Les tests de stimulation électrique garantissent l'absence de danger.
+</div>
+
+<h3>CHAPITRE 6 — CONVALESCENCE ET SUITES</h3>
+<table>
+<thead><tr><th>Activité</th><th>Délai approximatif</th><th>Conditions</th></tr></thead>
+<tbody>
+<tr><td>Marche et activités quotidiennes</td><td>Dès le jour même</td><td>Sans forcer, éviter de piétiner longuement.</td></tr>
+<tr><td>Conduite automobile</td><td>Le lendemain</td><td>Vous devez impérativement être raccompagné(e) le jour J.</td></tr>
+<tr><td>Arrêt de travail (sédentaire)</td><td>24 à 48 heures</td><td>Un simple repos le lendemain de l'intervention est recommandé.</td></tr>
+<tr><td>Arrêt de travail (physique)</td><td>Quelques jours</td><td>Éviter le port de charges lourdes pendant la phase inflammatoire.</td></tr>
+<tr><td>Kinésithérapie (gainage actif)</td><td>À 3 ou 4 semaines</td><td>À débuter dès que le bénéfice de l'intervention se fait sentir.</td></tr>
+<tr><td>Reprise sportive</td><td>À 3 ou 4 semaines</td><td>Reprise progressive (natation, vélo, marche).</td></tr>
+</tbody>
+</table>
+
+<h3>FOIRE AUX QUESTIONS (FAQ) — VOS QUESTIONS LES PLUS FRÉQUENTES</h3>
+<div class="note">
+<h4>La Douleur et la Procédure</h4>
+<p><strong>1. Est-ce que la rhizolyse lombaire fait mal ?</strong><br>
+L'anesthésie locale de la peau pique un peu. Lors de la coagulation, vous ressentirez une forte pression chaude ou une brûlure sourde dans le dos, mais cela reste très supportable et de courte durée.</p>
+
+<p><strong>2. Combien de temps dure l'intervention ?</strong><br>
+Le geste médical en lui-même dure environ 20 à 30 minutes, mais vous resterez quelques heures dans le service (chirurgie ambulatoire).</p>
+
+<p><strong>3. Suis-je endormi complètement ?</strong><br>
+Non. L'intervention se fait sous anesthésie locale. Vous devez rester conscient pour communiquer avec le médecin lors des tests électriques de sécurité.</p>
+
+<p><strong>4. Vais-je avoir une cicatrice ?</strong><br>
+Non. C'est un traitement "percutané" (à travers la peau). Vous n'aurez que de petits pansements au niveau des points de piqûre, à retirer le lendemain.</p>
+
+<p><strong>5. Quelle est la différence entre une infiltration et une rhizolyse ?</strong><br>
+L'infiltration injecte un anti-inflammatoire (corticoïde) pour calmer la crise à court terme. La rhizolyse utilise la chaleur pour neutraliser le nerf transmettant la douleur, offrant un soulagement à moyen/long terme.</p>
+
+<h4>Les Résultats et l'Effet Rebond</h4>
+<p><strong>6. Combien de temps faut-il pour que ça fasse effet ?</strong><br>
+Il faut être patient. L'effet optimal se juge après 3 à 4 semaines.</p>
+
+<p><strong>7. C'est normal d'avoir plus mal après l'intervention ?</strong><br>
+Oui, c'est l'effet rebond. La brûlure crée une inflammation locale qui peut accentuer vos douleurs habituelles pendant 4 à 10 jours.</p>
+
+<p><strong>8. Combien de temps dure le soulagement ?</strong><br>
+En moyenne de 6 à 18 mois, parfois plus, selon la vitesse de régénération de votre corps.</p>
+
+<p><strong>9. Pourquoi le nerf repousse-t-il après l'avoir brûlé ?</strong><br>
+C'est un phénomène biologique naturel. Contrairement à la moelle épinière, les petits nerfs périphériques de notre corps ont la capacité de se régénérer d'environ 1 millimètre par mois.</p>
+
+<p><strong>10. Que faire si l'intervention n'a pas marché ?</strong><br>
+Si c'est un échec, cela signifie généralement que vos douleurs proviennent d'une autre structure (comme le disque intervertébral). Votre chirurgien discutera avec vous d'autres options thérapeutiques.</p>
+
+<h4>Les Risques et les Craintes</h4>
+<p><strong>11. Peut-on être paralysé après une rhizolyse lombaire ?</strong><br>
+Non, c'est impossible. On cible uniquement un petit nerf de la sensibilité. Les gros nerfs moteurs de la mobilité sont très éloignés de la zone chauffée.</p>
+
+<p><strong>12. Est-ce dangereux de brûler un nerf dans le dos ?</strong><br>
+Non. Ce petit nerf (le rameau médian) ne sert à rien d'autre qu'à transmettre la douleur de cette articulation usée. Le neutraliser n'a aucune conséquence sur le fonctionnement de votre dos.</p>
+
+<p><strong>13. Est-ce que la thermocoagulation abîme les vertèbres ou soigne l'arthrose ?</strong><br>
+Ni l'un, ni l'autre. Elle ne répare pas le cartilage usé, mais elle ne détruit pas non plus l'os. Elle se contente de couper "l'alarme" douloureuse.</p>
+
+<p><strong>14. Quels sont les effets secondaires ?</strong><br>
+L'effet secondaire le plus marquant (en dehors de la douleur des premiers jours) est une sensation de "coup de soleil" ou de peau cartonnée dans le bas du dos (dysesthésie). C'est sans gravité et temporaire.</p>
+
+<p><strong>15. Est-ce que ça soigne aussi la sciatique ou la cruralgie ?</strong><br>
+Non. La sciatique est une douleur qui descend dans la jambe, causée par un problème discal. La rhizolyse ne traite que la douleur focalisée dans le bas du dos (lombalgie facettaire).</p>
+
+<h4>La Convalescence et la Vie Quotidienne</h4>
+<p><strong>16. Combien de temps d'arrêt de travail ?</strong><br>
+Généralement 24 à 48 heures pour un travail de bureau. Cela peut être prolongé à une semaine pour un travail de force physique.</p>
+
+<p><strong>17. Peut-on conduire le jour même ?</strong><br>
+Non, l'anesthésie locale et le risque de douleur empêchent la conduite le jour J. Vous devez rentrer accompagné(e).</p>
+
+<p><strong>18. Quand peut-on reprendre le sport ?</strong><br>
+Dès la 3ème ou 4ème semaine, de manière très progressive (vélo d'appartement, natation, marche dynamique).</p>
+
+<p><strong>19. Dois-je arrêter l'aspirine ou les anticoagulants avant l'intervention ?</strong><br>
+Oui, c'est souvent nécessaire pour éviter un hématome dans le muscle. Vous devez impérativement en parler à l'anesthésiste et à votre cardiologue.</p>
+
+<p><strong>20. Combien de fois peut-on refaire une rhizolyse dans sa vie ?</strong><br>
+Il n'y a pas de limite stricte. Si la douleur réapparaît au bout d'un an ou deux, l'intervention peut être renouvelée avec la même efficacité et la même sécurité.</p>
+</div>
+
+<h3>CONSENTEMENT ÉCLAIRÉ</h3>
+<p>J'atteste avoir reçu cette fiche d'information et en avoir pris connaissance. J'ai pu poser les questions que je souhaitais et j'ai obtenu des réponses satisfaisantes. J'ai compris la nature de l'intervention (Thermocoagulation lombaire par radiofréquence), son objectif (soulagement temporaire de 6 à 18 mois pour permettre la rééducation), ainsi que ses risques fréquents (recrudescence douloureuse, dysesthésies cutanées) et rares (hématome, échec partiel ou total) qui m'ont été exposés.</p>
+<p><strong>Date :</strong> </p>
+
+<div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:10px;"><p style="margin:0;flex:1;min-width:280px;"><strong>Nom et prénom du patient : </strong>________________________________</p><p style="margin:0;flex:1;min-width:280px;"><strong>Signature du patient :</strong> ________________________________</p></div>
+<footer>
+<div><strong>Espace Francilien du Rachis</strong> — 95, rue de Prony, 75017 Paris</div>
+<div>Dr Raphaël Jameson : dr.jameson@rachis.paris · Dr Mayalen Lamerain : dr.mlamerain@gmail.com · Dr Christophe Travert : dr.ctravert@gmail.com</div>
+<div><strong>www.rachis.paris</strong></div>
+</footer>
+</div>
+</div>
+</body>
+</html>
