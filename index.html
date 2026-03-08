@@ -3,7 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Espace Patient — Espace Francilien du Rachis</title>
+<title>Fiches d'Information Patient : Espace Francilien du Rachis</title>
+<meta name="description" content="Portail d'information patient de l'Espace Francilien du Rachis (Paris). Consultez nos fiches sur les chirurgies cervicales, lombaires et infiltrations rachidiennes."/>
+<link rel="canonical" href="https://raphaeljameson-png.github.io/espace-patient-rachis/" />
+
 <style>
   :root {
     --ink: #111;
@@ -45,12 +48,14 @@
     width: 60px;
     height: auto;
   }
-  .header-text h1 {
+  /* Ajustement SEO sémantique */
+  .header-text .brand-name {
     margin: 0;
     font-size: 16px;
     letter-spacing: 0.5px;
     color: var(--accent);
     text-transform: uppercase;
+    font-weight: bold;
   }
   .header-text p {
     margin: 2px 0 0 0;
@@ -69,7 +74,8 @@
     text-align: center;
     margin-bottom: 32px;
   }
-  .intro h2 {
+  /* H1 sémantique */
+  .intro h1 {
     margin: 0 0 8px 0;
     font-size: 22px;
     color: var(--ink);
@@ -100,7 +106,9 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     overflow: hidden;
   }
-  .card-header {
+  /* H2 sémantiques pour les cartes */
+  .card h2.card-header {
+    margin: 0;
     padding: 16px;
     font-weight: bold;
     font-size: 16px;
@@ -196,26 +204,26 @@
 
   <header class="header">
     <div class="header-content">
-      <img src="logo.png" alt="Logo">
+      <img src="logo.png" alt="Logo de l'Espace Francilien du Rachis">
       <div class="header-text">
-        <h1>Espace Francilien du Rachis</h1>
+        <div class="brand-name">Espace Francilien du Rachis</div>
         <p>Dr Jameson · Dr Lamerain · Dr Travert</p>
       </div>
     </div>
   </header>
 
-  <div class="container">
+  <main class="container">
     <div class="intro">
-      <h2>Vos fiches d'information</h2>
+      <h1>Vos fiches d'information patient</h1>
       <p>Sélectionnez l'intervention qui vous concerne pour lire, télécharger ou imprimer votre fiche détaillée.</p>
     </div>
 
     <div class="grid">
       
-      <div class="card">
-        <div class="card-header cervical">
+      <section class="card">
+        <h2 class="card-header cervical">
           Chirurgie Cervicale
-        </div>
+        </h2>
         <ul class="links">
           <li>
             <a href="acdf.html">Arthrodèse Cervicale Antérieure (ACDF) <span class="arrow">→</span></a>
@@ -227,12 +235,12 @@
             <a href="#" class="disabled">Canal cervical étroit <em>(À venir)</em> <span class="arrow">⏳</span></a>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="card">
-        <div class="card-header lombaire">
+      <section class="card">
+        <h2 class="card-header lombaire">
           Chirurgie Lombaire
-        </div>
+        </h2>
         <ul class="links">
           <li>
             <a href="alif.html">Arthrodèse Lombaire Antérieure (ALIF) <span class="arrow">→</span></a>
@@ -244,12 +252,12 @@
             <a href="#" class="disabled">Chirurgie de la Hernie discale <em>(À venir)</em> <span class="arrow">⏳</span></a>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="card" style="grid-column: 1 / -1;">
-        <div class="card-header pratique">
+      <section class="card" style="grid-column: 1 / -1;">
+        <h2 class="card-header pratique">
           Parcours & Informations pratiques
-        </div>
+        </h2>
         <ul class="links">
           <li>
             <a href="#" class="disabled">Les Infiltrations rachidiennes <em>(À venir)</em> <span class="arrow">⏳</span></a>
@@ -258,15 +266,15 @@
             <a href="#" class="disabled">Livret de préparation à la chirurgie <em>(À venir)</em> <span class="arrow">⏳</span></a>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="card" style="grid-column: 1 / -1;">
-        <div class="card-header feedback">
+      <section class="card" style="grid-column: 1 / -1;">
+        <h2 class="card-header feedback">
           Votre avis compte
-        </div>
+        </h2>
         <ul class="links">
           <li>
-            <a href="https://forms.gle/ncnQMr6ekrokkELe9" target="_blank" class="email-btn">
+            <a href="https://forms.gle/ncnQMr6ekrokkELe9" target="_blank" rel="noopener noreferrer" class="email-btn">
               <div>
                 <strong>Suggérer une amélioration</strong><br>
                 <span style="font-size: 13px; color: var(--muted); font-weight: normal;">Un petit questionnaire rapide pour nous aider à rendre ces fiches encore plus claires.</span>
@@ -275,14 +283,14 @@
             </a>
           </li>
         </ul>
-      </div>
+      </section>
 
     </div>
-  </div>
+  </main>
 
   <footer>
     95, rue de Prony — 75017 Paris<br>
-    Retrouvez-nous sur <a href="http://www.rachis.paris" target="_blank">www.rachis.paris</a>
+    Retrouvez-nous sur <a href="http://www.rachis.paris" target="_blank" rel="noopener noreferrer">www.rachis.paris</a>
   </footer>
 
 </body>
